@@ -10,9 +10,9 @@ module.exports = {
             throw "\"null\" is not a valid number [arg 0].";
         if (b === null)
             throw "\"null\" is not a valid number [arg 1].";
-        if (isNaN(a))
+        if (typeof (a) === "string")
             throw "a String is not a valid number [arg 0].";
-        if (isNaN(b))
+        if (typeof (b) === "string")
             throw "a String is not a valid number [arg 1].";
 
         return parseInt(a + b);
